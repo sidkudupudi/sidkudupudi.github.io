@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects — Sidharth Kudupudi</title>
+<meta name="description" content="Full project archive — perception, tracking, robotics, and generative AI work by Sidharth Kudupudi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>S.KUDUPUDI // ROBOTICS.CV</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">All Projects</a>
+      <a href="index.html#about" class="hide-mobile">Stack</a>
+      <a href="index.html#contact" class="hide-mobile">Contact</a>
+      <a href="#" class="nav-cta">Resume ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding: 64px 0 40px;">
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Full Archive</div>
+    <h1 style="font-size: clamp(30px, 4.5vw, 46px);">17 projects, <span>4 disciplines.</span></h1>
+    <p class="hero-sub">Everything from sensor fusion and 3D perception to classical estimation and hardware robotics — filter by category below.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="category-tabs">
+      <button class="cat-tab active" data-cat="all">All (17)</button>
+      <button class="cat-tab" data-cat="perception">Perception &amp; Sensor Fusion (6)</button>
+      <button class="cat-tab" data-cat="tracking">Tracking &amp; State Estimation (4)</button>
+      <button class="cat-tab" data-cat="robotics">Robotics &amp; Autonomous Systems (4)</button>
+      <button class="cat-tab" data-cat="genai">Generative AI &amp; Applied ML (3)</button>
+    </div>
+
+    <!-- ================= PERCEPTION & SENSOR FUSION ================= -->
+    <div class="category-block" data-cat="perception">
+      <h3>01 / Perception &amp; Sensor Fusion</h3>
+      <p class="cat-desc">Multi-sensor pipelines: LiDAR, camera, thermal, and monocular geometry for detection and depth.</p>
+      <div class="mini-grid">
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[LIDAR+CAMERA]</span>
+          <h4>Multimodal LiDAR–Camera Fusion &amp; YOLO Depth Estimation Engine</h4>
+          <p>Synchronized 10Hz LiDAR with 30Hz video on NVIDIA's PhysicalAI-AV dataset; custom 4×4 projection engine mapping Draco point clouds to a 120° distorted camera plane, fused with YOLO11x-seg masks.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">YOLO11x-seg</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[ZERO-SHOT 3D]</span>
+          <h4>Open-Vocabulary 3D Perception</h4>
+          <p>LiDAR + camera fusion for arbitrary-class detection via OWL-ViT foundation models; extrinsic calibration and World→Vehicle→Camera projection on the Waymo Open Dataset.</p>
+          <div class="tag-row"><span class="tag">OWL-ViT</span><span class="tag">Waymo OD</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[THERMAL IR]</span>
+          <h4>Thermal Vision System for Autonomous Safety</h4>
+          <p>YOLOv8 fine-tuned on 10,000+ FLIR ADAS thermal/RGB pairs for pedestrian and vehicle detection in total darkness, with multi-modal bounding-box overlay onto RGB feeds.</p>
+          <div class="tag-row"><span class="tag">YOLOv8</span><span class="tag">FLIR ADAS</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[MONOCULAR DEPTH]</span>
+          <h4>Mono-Vision Radar &amp; Range Estimation System</h4>
+          <p>Real-time metric depth and lateral position from monocular video using pinhole camera geometry and focal-length calibration — &lt;5% range error from a single low-cost camera.</p>
+          <div class="tag-row"><span class="tag">OpenCV</span><span class="tag">Pinhole Geometry</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[WAREHOUSE VISION]</span>
+          <h4>Automated Dimensioning System for Warehouse Management</h4>
+          <p>Camera-based object dimensioning for shipping and manufacturing; algorithms correcting depth inconsistencies on spherical and sloped objects, improving accuracy 20%.</p>
+          <div class="tag-row"><span class="tag">Computer Vision</span><span class="tag">Depth Correction</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[IMAGE RESTORATION]</span>
+          <h4>Airborne Sensor Image Restoration &amp; Atmospheric Modeling</h4>
+          <p>Dark Channel Prior model to remove atmospheric haze from aerial imagery; automated OpenCV/NumPy benchmark pipeline improving PSNR by +2.68 dB.</p>
+          <div class="tag-row"><span class="tag">Dark Channel Prior</span><span class="tag">NumPy</span></div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ================= TRACKING & STATE ESTIMATION ================= -->
+    <div class="category-block" data-cat="tracking">
+      <h3>02 / Tracking &amp; State Estimation</h3>
+      <p class="cat-desc">Classical and learned methods for estimating and following dynamic state over time.</p>
+      <div class="mini-grid">
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[MOT · UAV]</span>
+          <h4>Persistent Multi-Object Tracking for High-Altitude UAVs</h4>
+          <p>RT-DETR + BoT-SORT tracking 333,000+ targets in drone footage, with Camera Motion Compensation achieving sub-1% ID switch rate; 22.6% MOTA / 42.3% IDF1 on VisDrone.</p>
+          <div class="tag-row"><span class="tag">RT-DETR</span><span class="tag">BoT-SORT</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[EKF]</span>
+          <h4>Real-Time Visual State Estimation System</h4>
+          <p>Discrete Kalman Filter from first principles estimating 4-DOF position/velocity from noisy vision data; reduced trajectory jitter ~40%, ran at 30+ FPS with OpenCV.</p>
+          <div class="tag-row"><span class="tag">Kalman Filter</span><span class="tag">NumPy</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[ORBITAL EKF]</span>
+          <h4>Statistical Orbit Determination &amp; EKF Consistency Analysis</h4>
+          <p>Extended Kalman Filter estimating 4-state satellite orbital trajectory across a 14,000s simulation; 50-run Monte Carlo Truth Model Test validated NEES/NIS within 95% Chi-square bounds.</p>
+          <div class="tag-row"><span class="tag">MATLAB</span><span class="tag">Monte Carlo</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[SFM]</span>
+          <h4>Single-View 3D Reconstruction &amp; Tracking</h4>
+          <p>Structure-from-Motion pipeline reconstructing 3D point clouds of falling objects from single 2D video, using Co-Tracker, COLMAP, and NVIDIA Isaac Sim for physics-based training data.</p>
+          <div class="tag-row"><span class="tag">Co-Tracker</span><span class="tag">Isaac Sim</span></div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ================= ROBOTICS & AUTONOMOUS SYSTEMS ================= -->
+    <div class="category-block" data-cat="robotics">
+      <h3>03 / Robotics &amp; Autonomous Systems</h3>
+      <p class="cat-desc">Embodied systems — navigation stacks, manipulation hardware, and vision-driven control.</p>
+      <div class="mini-grid">
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[ROS2 · SLAM]</span>
+          <h4>ROS-Based Assistive Ground Robot with LLM-Driven Voice Control</h4>
+          <p>Autonomous TurtleBot3 navigation via SLAM (98% accuracy), offline speech recognition with Vosk (95% accuracy), and LLaMA-based intent understanding (90% accuracy) for visually impaired users.</p>
+          <div class="tag-row"><span class="tag">ROS</span><span class="tag">Vosk</span><span class="tag">LLaMA</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[SOFT ROBOTICS]</span>
+          <h4>Variable Stiffness Tapered Soft Robotic Gripper</h4>
+          <p>Designed and fabricated a tapered soft gripper with adjustable stiffness for fruit picking; ANSYS structural analysis, 3D-printed prototyping, and UR5 arm integration. Patent applied.</p>
+          <div class="tag-row"><span class="tag">ANSYS</span><span class="tag">UR5</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[ROS2 · PATH PLANNING]</span>
+          <h4>Maze Solving Bot using ROS2</h4>
+          <p>SLAM-based navigation with A*/Dijkstra path planning; 15% efficiency gain and 30–40% less trial-and-error via Gazebo, RViz, and URDF integration.</p>
+          <div class="tag-row"><span class="tag">ROS2</span><span class="tag">Gazebo</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[TRAFFIC VISION]</span>
+          <h4>Vehicle Speed Detection using Machine Vision</h4>
+          <p>OpenCV pipeline detecting, tracking, and measuring vehicle speed via bounding-box tracking and perspective-to-pixel mapping, &lt;5% error and 20% higher accuracy than traditional methods.</p>
+          <div class="tag-row"><span class="tag">OpenCV</span><span class="tag">PPM</span></div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ================= GENERATIVE AI & APPLIED ML ================= -->
+    <div class="category-block" data-cat="genai">
+      <h3>04 / Generative AI &amp; Applied ML</h3>
+      <p class="cat-desc">Learned models — from transformer-based perception to reinforcement learning and structured VLM output.</p>
+      <div class="mini-grid">
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[VLM · PEFT]</span>
+          <h4>Fine-Tuning VLMs for Pedestrian Intent Prediction</h4>
+          <p>LoRA Rank-16 fine-tuning of Qwen2-VL-2B on 655 curated JAAD crosswalk scenarios, outputting structured JSON intent, confidence, and reasoning chains with 98.8% API stability, 1.40s lead time.</p>
+          <div class="tag-row"><span class="tag">Qwen2-VL</span><span class="tag">LoRA</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[TENSORRT DEPLOY]</span>
+          <h4>Real-Time Industrial Defect Segmentation Pipeline</h4>
+          <p>YOLOv11x-seg (1024px) on MVTec AD achieving 0.928 Mask mAP50; custom async C++/TensorRT (FP16) engine with pinned host memory for sub-2ms latency and TTA-driven precision.</p>
+          <div class="tag-row"><span class="tag">TensorRT</span><span class="tag">C++</span></div>
+        </article>
+
+        <article class="mini-card bracket-frame">
+          <span class="card-label">[REINFORCEMENT LEARNING]</span>
+          <h4>Deep-Q Learning Agent for Traffic Signal Control</h4>
+          <p>DQL agent integrated with SUMO Traffic Simulator and TensorFlow optimizing signal timing at a 4-way intersection; reward function on cumulative waiting time drove adaptive congestion reduction.</p>
+          <div class="tag-row"><span class="tag">TensorFlow</span><span class="tag">SUMO</span></div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Let's build something.</h3>
+        <p>Open to full-time and internship roles in autonomous vehicle perception, HD mapping, and applied computer vision.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:sid.kudupudi@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sidharthkudupudi-b68b48203" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sidharth Kudupudi</span>
+      <span>Minneapolis, MN — sid.kudupudi@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

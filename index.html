@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidharth Kudupudi — Robotics &amp; Computer Vision Engineer</title>
+<meta name="description" content="Portfolio of Sidharth Kudupudi — robotics and computer vision engineer specializing in multi-modal sensor fusion, perception, and applied ML for autonomous systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>S.KUDUPUDI // ROBOTICS.CV</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">All Projects</a>
+      <a href="#about" class="hide-mobile">Stack</a>
+      <a href="#contact" class="hide-mobile">Contact</a>
+      <a href="#" class="nav-cta">Resume ↓</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas id="pointcloud"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-eyebrow">Perception &amp; Autonomy Engineering</div>
+    <h1>Building the sensors and models that let machines <span>understand</span> where they are.</h1>
+    <p class="hero-sub">
+      I'm Sidharth Kudupudi, a Robotics graduate student at the University of Minnesota
+      focused on multi-modal perception for autonomous systems — LiDAR-camera fusion, 3D
+      detection, tracking, and structured-output vision-language models.
+    </p>
+    <div class="hero-readout">
+      <span class="k">STACK:</span> ROS2 · PyTorch · OpenCV · TensorRT · CUDA · Isaac Sim<br>
+      <span class="k">FOCUS:</span> Sensor Fusion · HD Mapping · 3D Perception · VLMs for Autonomy<br>
+      <span class="k">STATUS:</span> Open to full-time &amp; internship roles — onsite / hybrid / remote
+    </div>
+    <div class="hero-actions">
+      <a href="projects.html" class="btn btn-primary">View All Projects →</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Featured Work</span>
+        <h2>Flagship Projects</h2>
+      </div>
+      <span class="count">05 selected / 17 total</span>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card featured-lg bracket-frame">
+        <div>
+          <span class="card-label">[SENSOR_FUSION · LIDAR+CAMERA]</span>
+          <h3>Multimodal LiDAR–Camera Fusion &amp; YOLO Depth Estimation Engine</h3>
+          <p>
+            A continuous fusion pipeline built on NVIDIA's PhysicalAI-Autonomous-Vehicles dataset,
+            synchronizing 10Hz 3D LiDAR geometry with 30Hz 1080p video. A custom spatial projection
+            engine maps Draco-encoded point clouds onto a distorted 120° wide-angle camera plane,
+            cross-referenced with YOLO11x-seg instance masks for real-time depth estimation.
+          </p>
+          <div class="metric-row">
+            <div class="metric"><span class="val">10Hz / 30Hz</span><span class="lbl">LiDAR / Camera Sync</span></div>
+            <div class="metric"><span class="val">120°</span><span class="lbl">Wide-Angle Projection</span></div>
+            <div class="metric"><span class="val">4×4</span><span class="lbl">Coordinate Transforms</span></div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">YOLO11x-seg</span><span class="tag">Point Cloud Projection</span><span class="tag">NVIDIA PhysicalAI-AV</span>
+          </div>
+        </div>
+        <div class="media-slot">[ VIDEO / POINT-CLOUD OVERLAY — add media ]</div>
+      </article>
+
+      <article class="project-card bracket-frame">
+        <span class="card-label">[VLM · GENERATIVE AI]</span>
+        <h3>Fine-Tuning VLMs for Pedestrian Intent Prediction</h3>
+        <p>LoRA fine-tuned Qwen2-VL-2B on 655 hyper-contextualized JAAD crosswalk scenarios, producing structured JSON intent, confidence, and reasoning for AV decision-making.</p>
+        <div class="metric-row">
+          <div class="metric"><span class="val">98.8%</span><span class="lbl">JSON Stability</span></div>
+          <div class="metric"><span class="val">1.40s</span><span class="lbl">Predictive Lead Time</span></div>
+        </div>
+        <div class="tag-row"><span class="tag">Qwen2-VL-2B</span><span class="tag">LoRA</span><span class="tag">JAAD</span></div>
+      </article>
+
+      <article class="project-card bracket-frame">
+        <span class="card-label">[3D PERCEPTION · ZERO-SHOT]</span>
+        <h3>Open-Vocabulary 3D Perception</h3>
+        <p>Fused LiDAR point clouds with camera images to detect arbitrary object classes using OWL-ViT, distilling 2D vision-language semantics into 3D space on the Waymo Open Dataset.</p>
+        <div class="metric-row">
+          <div class="metric"><span class="val">World→Cam</span><span class="lbl">Extrinsic Calibration</span></div>
+        </div>
+        <div class="tag-row"><span class="tag">OWL-ViT</span><span class="tag">Waymo OD</span><span class="tag">Foundation Models</span></div>
+      </article>
+
+      <article class="project-card bracket-frame">
+        <span class="card-label">[TRACKING · UAV]</span>
+        <h3>Persistent Multi-Object Tracking, High-Altitude UAVs</h3>
+        <p>RT-DETR + BoT-SORT tracking system monitoring 333,000+ dynamic targets, with Camera Motion Compensation to cancel erratic drone movement.</p>
+        <div class="metric-row">
+          <div class="metric"><span class="val">&lt;1%</span><span class="lbl">ID Switch Rate</span></div>
+          <div class="metric"><span class="val">22.6%</span><span class="lbl">MOTA (VisDrone)</span></div>
+        </div>
+        <div class="tag-row"><span class="tag">RT-DETR</span><span class="tag">BoT-SORT</span><span class="tag">VisDrone</span></div>
+      </article>
+
+      <article class="project-card bracket-frame">
+        <span class="card-label">[DEPLOYMENT · TENSORRT]</span>
+        <h3>Real-Time Industrial Defect Segmentation</h3>
+        <p>YOLOv11x-seg at 1024px on MVTec AD, deployed via a custom async C++ / TensorRT (FP16) inference engine with pinned host memory to eliminate PCIe bottlenecks.</p>
+        <div class="metric-row">
+          <div class="metric"><span class="val">0.928</span><span class="lbl">Mask mAP50</span></div>
+          <div class="metric"><span class="val">&lt;2ms</span><span class="lbl">Frame Latency</span></div>
+        </div>
+        <div class="tag-row"><span class="tag">TensorRT</span><span class="tag">C++</span><span class="tag">MVTec AD</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">System Specification</span>
+        <h2>Skills &amp; Background</h2>
+      </div>
+    </div>
+
+    <div class="spec-sheet">
+      <div class="spec-row">
+        <div class="spec-key">Perception</div>
+        <div class="spec-val">
+          <span class="tag">LiDAR-Camera Fusion</span><span class="tag">3D Object Detection</span><span class="tag">Multi-Object Tracking</span><span class="tag">Open-Vocabulary Detection</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Estimation</div>
+        <div class="spec-val">
+          <span class="tag">Kalman / Extended Kalman Filters</span><span class="tag">Structure-from-Motion</span><span class="tag">Sensor Calibration</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Generative AI</div>
+        <div class="spec-val">
+          <span class="tag">VLM Fine-Tuning (LoRA)</span><span class="tag">Structured JSON Output</span><span class="tag">Qwen2-VL</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Robotics</div>
+        <div class="spec-val">
+          <span class="tag">ROS2</span><span class="tag">SLAM</span><span class="tag">Gazebo / RViz / URDF</span><span class="tag">Path Planning</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Tools</div>
+        <div class="spec-val">
+          <span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">TensorRT</span><span class="tag">CUDA</span><span class="tag">Isaac Sim</span><span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Education</div>
+        <div class="spec-val">
+          <span class="tag">M.S. Robotics — University of Minnesota</span><span class="tag">B.Tech Mechatronics — Manipal Institute of Technology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Let's build something.</h3>
+        <p>Open to full-time and internship roles in autonomous vehicle perception, HD mapping, and applied computer vision.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:sid.kudupudi@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/sidharthkudupudi-b68b48203" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="projects.html">All Projects</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sidharth Kudupudi</span>
+      <span>Minneapolis, MN — sid.kudupudi@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
